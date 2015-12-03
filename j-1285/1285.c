@@ -17,7 +17,6 @@ int fibo( int n ) {
 }
 int main() {
     int n;
-  // scanf.. 입력받는 부분
   scanf("%d", &n);
   printf("%d",fibo(n));
   return 0;
