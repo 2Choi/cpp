@@ -17,11 +17,8 @@ int main()
     scanf("%d", &n);
     for(i=0; n!=P(n); i++)
         {
-            printf("%d\n", n);
-            printf("%d\n", P(n));
             s+=n;
             n+=P(n);
-            printf("----------------------\n");
         }
         printf("%d ", i);
         printf("%d\n", n);
