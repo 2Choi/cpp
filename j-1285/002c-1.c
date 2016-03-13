@@ -8,6 +8,5 @@ int main()
     printf("%lld\n",a*b);
     printf("%lld\n",a/b);
     printf("%lld\n",a%b);
-    printf("%.2f\n",(float)a/b);
-    printf("%f",5.0/3);
+    printf("%.2f",(float)a/b);
 }
