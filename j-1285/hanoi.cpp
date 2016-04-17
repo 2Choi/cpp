@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<>
 int a[3][101]={},n;
 
 
@@ -24,25 +25,6 @@ int last_empty(int tower){
     }
 }
 
-void output(){
-    int i;
-    for(i=0;i<n;i++)
-    {
-        printf("%d ",a[0][i]);
-    }
-    printf("\n");
-    for(i=0;i<n;i++)
-    {
-        printf("%d ",a[1][i]);
-    }
-    printf("\n");
-    for(i=0;i<n;i++)
-    {
-        printf("%d ",a[2][i]);
-    }
-    printf("\n----------------------\n");
-}
-
 // level개만큼 str에서 fin으로 옮기는 함수
 void hanoi(int level,int str,int mid,int fin)
 {
@@ -53,7 +35,7 @@ void hanoi(int level,int str,int mid,int fin)
 
         a[fin][f] = a[str][s];
         a[str][s]=0;
-        output();
+        printf("%d %d\n",str+1,fin+1);
     }
     else
     {
@@ -72,12 +54,16 @@ void hanoi(int level,int str,int mid,int fin)
 
 int main()
 {
-    int i;
+    long long int i,s=1;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         a[0][i]=n-i;
     }
-    output();
-    hanoi(n,0,1,2);
+    s= s << n;
+    printf("%lld\n",s-1);
+    if(n<=20)
+    {
+        hanoi(n,0,1,2);
+    }
 }
